@@ -17,13 +17,36 @@
 > To create a new Bicycle object called myBike, a constructor is called by the new operator:
 
 > Bicycle myBike = new Bicycle(30, 0, 8);
+- https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html
 
-## 封装 --> 封装private --> 构造函数(constructor,用于初始化对象，比如人一般出生就有名字，产品出厂就有SKU，售价 ) --> this关键字(代表本类的对象);
+class Person(String name)
+{
+  this.name = name;
+}
+
+ThisDemo
+main
+Person p1 = new Person(“zhangsan”); //传参数进来； this代表本类的对象（的变量），是重载形式出现，f(x) this.x = x; f(x,y) this.x=x; this.y=y;
+
+--------------------------------------------------------------------------------------------
+
+#构造函数 constructor
+### 封装 --> 封装private --> 构造函数(constructor,用于初始化对象，比如人一般出生就有名字，产品出厂就有SKU，售价 ) --> this关键字(代表本类的对象（的变量）);
 constructor函数名 = 类名；2，不用定义返回值类型； 3，不可以写return语句；   
 
-多个构造函数是以重载形式出现的； f(x) f(x,y) f(x,y,z), ...;
+多个构造函数是以重载形式出现的； f，（f就是default constructor，不用写，但java默认给你写上；），f(x) f(x,y) f(x,y,z), ...;
 
 constructor函数名(参数) {fields}   //语句/statements以大括号“}"或者分号";"结尾；
+
+
+> You cannot write two constructors that have the same number and type of arguments for the same class, because the platform would not be able to tell them apart. Doing so causes a compile-time error.
+- https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html
+
+
+
+There are three types of constructors: default, no-arg and parameterised.
+- http://beginnersbook.com/2013/03/constructors-in-java/
+
 
 
 模糊点：参数，什么时候要写，什么时候不写；构造函数需要写，一般方法可以不用写参数?
